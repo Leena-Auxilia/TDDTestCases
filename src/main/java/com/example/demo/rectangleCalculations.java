@@ -9,10 +9,30 @@ public class rectangleCalculations {
 
 
     public float calculateArea(float width, float height) {
-        return width * height;
+        if(width<=0)
+        {
+            throw new IllegalArgumentException("Width/Length of the Rectangle should be Positive.");
+        }
+        if(height<=0)
+        {
+            throw new IllegalArgumentException("Height of the Rectangle should be Positive.");
+        }
+        else {
+            return width * height;
+        }
     }
 
-    public float calculatePerimeter(float myWidth, float myHeight) {
-        return 2* (myWidth + myHeight);
+    public float calculatePerimeter(float width, float height) {
+        if(width<=0)
+        {
+            throw new IllegalArgumentException("Width/Length of the Rectangle should be Positive.");
+        }
+        if(height<=0)
+        {
+            throw new IllegalArgumentException("Height of the Rectangle should be Positive.");
+        }
+        else {
+            return 2 * (width + height);
+        }
     }
 }
